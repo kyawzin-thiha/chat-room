@@ -1,0 +1,23 @@
+{
+  "name": "chat-room",
+  "version": "1.0.0",
+  "description": "A chat room application for friends to chat with each other, build in top of Next.js and Nest.js pared with Socket.io and MongoDB.",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "chat",
+    "realtime",
+    "socket.io"
+  ],
+  "author": "Kyaw Zin Thiha",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,scss,md}": "prettier --write"
+  }
+}
