@@ -1,0 +1,113 @@
+.conversation-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFF2E3; // Same as the room page
+
+  .chat-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 0 15px 0 rgba(#C2C094, 0.3);
+
+    .chat-title {
+      width: 100%;
+      height: 10%;
+      padding: 10px;
+      letter-spacing: 1px;
+      text-align: center;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .messages-row {
+      width: 100%;
+      flex-grow: 1;
+      overflow-y: scroll;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .row {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &.mine {
+          justify-content: flex-end;
+
+          .message {
+            background-color: #D7DFB9;
+          }
+        }
+
+        .message {
+          max-width: 60%;
+          padding: 10px;
+          border-radius: 15px;
+          background-color: white; // Change as needed
+          margin-bottom: 4px;
+          position: relative;
+        }
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #D7DFB9; // Avatar background color
+          color: white; // Avatar text color
+          margin-right: 10px;
+          font-weight: bold;
+        }
+
+      }
+    }
+
+    .input-row {
+      display: flex;
+      height: 10%;
+      align-items: center;
+      padding: 0 10px;
+
+      form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      input {
+        flex-grow: 1;
+        margin-right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #D7DFB9;
+      }
+
+      button {
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        background-color: #D7DFB9;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}

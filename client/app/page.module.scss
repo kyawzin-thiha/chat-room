@@ -1,0 +1,91 @@
+.room-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFF2E3;
+
+  .form-container {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(#D7DFB9, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+
+      input {
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #D7DFB9;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #000;
+        outline: none;
+      }
+
+      button {
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #D7DFB9;
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+
+
+      }
+    }
+
+    @media (max-width: 600px) {
+      height: 70%;
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+      position: absolute;
+      bottom: 0;
+      box-shadow: none;
+
+      .form {
+        height: 100%;
+        justify-content: space-between; // This will push the button to the bottom
+
+        button {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .input-field {
+      margin-bottom: 20px;
+    }
+
+    .submit-btn {
+      align-self: center;
+    }
+  }
+}

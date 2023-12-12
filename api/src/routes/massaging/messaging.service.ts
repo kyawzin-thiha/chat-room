@@ -16,7 +16,7 @@ export class MessagingService {
 	}
 
 	async saveMessage(groupId: string, message: string, senderId: string) {
-		const [savedMessage, error] = await this.message.createMessage(groupId, message, senderId);
+		const [savedMessage, error] = await this.message.createMessage(groupId, senderId, message);
 
 		if (error) {
 			throw new HttpException(error.message, error.status);
